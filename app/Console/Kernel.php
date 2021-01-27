@@ -24,6 +24,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
+        $schedule->exec('php SCRAPPER/scrapper.php')->daily();
         // $schedule->command('inspire')->hourly();
     }
 
